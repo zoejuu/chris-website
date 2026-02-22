@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-gold: #D4AF37;
+  --color-brand-primary: #8B735B;  /* 메인 브라운 */
+  --color-brand-bg: #FAF9F6;       /* 부드러운 배경 */
+  --color-brand-text: #4A3F35;     /* 진한 텍스트 */
 }

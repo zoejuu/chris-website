@@ -1,38 +1,25 @@
-"use client"
-
-import { motion } from "framer-motion"
-import Link from 'next/link';
-
-export default function DesignA() {
+export default function DesignB() {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden my-3">
-      
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/background.jpg"
-          alt="Luxury Interior" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-white/60 z-10"></div>
-      </div>
-
-      <div className="relative z-20 max-w-7xl mx-auto py-32 px-10 text-center">
-        <span className="uppercase tracking-[0.3em] text-sm text-gray-600 mb-4 block font-medium">
-          Melbourne Bespoke Interiors
-        </span>
-        <h1 className="text-6xl font-extralight text-gray-900 mb-8 leading-[1.1]">
-          The Art of <br /> <span className="italic font-serif text-gray-800">Light and Shadow</span>
-        </h1>
-        <p className="max-w-xl mx-auto text-gray-700 font-light leading-relaxed mb-12 text-lg">
-          Elevating Melbourne homes with premium fabrics and understated elegance. 
-          We don't just hang curtains; we design the way light enters your sanctuary.
-        </p>
-        <div className="flex justify-center">
-          <Link href="/products" className="cursor-pointer">
-            <button className="cursor-pointer border border-gray-900 px-12 py-4 text-xs uppercase tracking-[0.2em] hover:bg-gray-900 hover:text-white transition-all duration-500 ease-in-out">
-              Explore the Collection
-            </button>
-          </Link>
+    <section className="bg-[#FAF9F6] py-20 px-6 md:px-12 rounded-[2.5rem] m-4 md:m-8">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="order-2 md:order-1">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#4A3F35] mb-6 leading-tight">
+            Bring Warmth to <br />Every Room
+          </h1>
+          <p className="text-[#7A6F65] text-lg mb-8 leading-relaxed">
+            Create your perfect retreat with soft textures and beautiful drapes. 
+            Locally made in Melbourne, designed for your family’s comfort.
+          </p>
+          <button className="bg-[#8B735B] text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-[#6F5C49] transition-all shadow-md hover:shadow-xl">
+            Book a Free Measure & Quote
+          </button>
+        </div>
+        <div className="order-1 md:order-2 relative h-[450px] rounded-[2rem] overflow-hidden shadow-lg">
+          <img 
+            src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070" 
+            alt="Cozy Melbourne Living Room" 
+            className="object-cover w-full h-full" 
+          />
         </div>
       </div>
     </section>
