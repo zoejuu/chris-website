@@ -17,9 +17,9 @@ export default async function ProductsPage() {
 
   return (
     <main className="bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-10 py-24">
+      <div className="max-w-7xl mx-auto px-10 py-10">
         {/* Page Header */}
-        <header className="mb-32 text-center">
+        <header className="mb-12 text-center">
           <span className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6 block">Curated Series</span>
           <h1 className="text-5xl font-serif font-light text-gray-900 italic">The Collection</h1>
           <div className="w-12 h-[1px] bg-gray-200 mx-auto mt-10"></div>
