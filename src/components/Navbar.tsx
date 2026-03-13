@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
   return (
-    <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 px-10 py-8 border-b border-gray-50">
+    <nav className="bg-gray-100/40 backdrop-blur-md sticky top-0 z-50 px-10 py-4 border-b border-gray-100">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo: Serif font for luxury feeling */}
         <Link href="/" className="text-2xl font-serif tracking-widest text-gray-900 uppercase">

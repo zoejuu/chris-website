@@ -16,7 +16,7 @@ export default async function ProductsPage() {
   const products = await getProducts();
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="bg-gray-100 min-h-screen">
       <div className="max-w-7xl mx-auto px-10 py-10">
         {/* Page Header */}
         <header className="mb-12 text-center">
