@@ -1,93 +1,87 @@
 'use client';
 
-import Link from 'next/link'
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white/40 backdrop-blur-md sticky top-0 z-50 px-10 py-4 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-serif tracking-widest text-gray-900 uppercase">
-          Chris <span className="italic font-light text-orange-400">Curtains</span>
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent px-10 py-8">
+      <div className="max-w-7xl mx-auto flex justify-center items-center gap-16 md:gap-50">
+        
+        {/* 1. Logo */}
+        <Link href="/" className="text-2xl font-black tracking-tighter uppercase italic text-white shrink-0">
+          Chris <span className="text-orange-400">Curtains</span>
         </Link>
 
-        <div className="hidden md:flex items-center space-x-12 text-[11px] uppercase tracking-[0.3em] text-gray-500 font-medium">
-          <Link href="/" className="hover:text-gray-900 transition-colors">Home</Link>
+        {/* 2. Menu + Button Group */}
+        <div className="hidden md:flex items-center gap-2">
+          {/* Only Products Dropdown */}
           <div className="relative group">
-  
-            {/* Products button */}
-            <div className="px-2 py-1 transition-colors group-hover:bg-white/0">
-              <span className="hover:text-gray-900 transition-colors cursor-pointer">
-                Products
-              </span>
-            </div>
-
-            {/* Dropdown */}
-            <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-white backdrop-blur-md px-6 py-4 space-y-4 text-[11px] uppercase tracking-[0.2em] text-gray-500 font-medium shadow-md">
-                <Link href="/products/curtains" className="block hover:text-gray-900 transition-colors">
-                  Curtains
-                </Link>
-                <Link href="/products/blinds" className="block hover:text-gray-900 transition-colors">
-                  Shutters
-                </Link>
-                <Link href="/products/sheers" className="block hover:text-gray-900 transition-colors">
-                  Blinds
-                </Link>
-                <Link href="/products/sheers" className="block hover:text-gray-900 transition-colors">
-                  Zip Screens
-                </Link>
-                <Link href="/products/sheers" className="block hover:text-gray-900 transition-colors">
-                  Automation
-                </Link>
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-white cursor-pointer hover:text-orange-500 transition-colors">
+              Products
+            </span>
+            
+            {/* Dropdown Menu */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="bg-slate-900/95 backdrop-blur-xl border border-white/10 p-6 min-w-[200px] space-y-4 shadow-2xl rounded-lg">
+                {['Curtains', 'Shutters', 'Blinds', 'Zip Screens', 'Automation'].map((item) => (
+                  <Link 
+                    key={item}
+                    href={`/products/${item.toLowerCase().replace(' ', '')}`} 
+                    className="block text-white hover:text-orange-500 transition-colors text-xs font-bold tracking-widest uppercase"
+                  >
+                    {item}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
-          <Link href="/products" className="hover:text-gray-900 transition-colors">Collection</Link>
 
-          <Link href="/contact" className="pl-4">
-            <span className="text-gray-900 font-medium border-b border-gray-900 pb-1">
-              Enquiry
-            </span>
-          </Link>
-        </div>
+          {/* Vertical Divider */}
+          <div className="h-4 w-[1px] bg-white/20 mx-2"></div>
 
-        {/* Hamburger button */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col space-y-1"
-        >
-          <span className="w-5 h-[1px] bg-gray-900"></span>
-          <span className="w-5 h-[1px] bg-gray-900"></span>
-          <span className="w-5 h-[1px] bg-gray-900"></span>
-        </button>
-      </div>
-      {open && (
-        <div className="md:hidden mt-6 flex flex-col space-y-6 text-[11px] uppercase tracking-[0.3em] text-gray-500 font-medium">
-          <Link href="/" className="hover:text-gray-900 transition-colors">Home</Link>
-          <div className="flex flex-col space-y-3">
-            <span className="hover:text-gray-900 transition-colors">Products</span>
-
-            <Link href="/products/curtains" className="pl-4 hover:text-gray-900 transition-colors tracking-[0.2em]">
-              Curtains
-            </Link>
-            <Link href="/products/blinds" className="pl-4 hover:text-gray-900 transition-colors tracking-[0.2em]">
-              Shutters
-            </Link>
-            <Link href="/products/sheers" className="pl-4 hover:text-gray-900 transition-colors tracking-[0.2em]">
-              Blinds
-            </Link>
-            <Link href="/products/sheers" className="pl-4 hover:text-gray-900 transition-colors tracking-[0.2em]">
-              Zip Screens
-            </Link>
-            <Link href="/products/sheers" className="pl-4 hover:text-gray-900 transition-colors tracking-[0.2em]">
-              Automation
+          {/* FREE QUOTE Button */}
+          <div className="shrink-0">
+            <Link href="/contact">
+              <button className="bg-white/10 border border-white/40 text-white px-7 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                GET FREE QUOTE
+              </button>
             </Link>
           </div>
-          <Link href="/products" className="hover:text-gray-900 transition-colors">Collection</Link>
-          <Link href="/contact" className="text-gray-900 font-medium underline underline-offset-4 decoration-1">Enquiry</Link>
+        </div>
+
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden absolute right-10 flex flex-col space-y-1.5"
+        >
+          <span className={`w-6 h-0.5 bg-white transition-all ${open ? 'rotate-45 translate-y-2' : ''}`}></span>
+          <span className={`w-6 h-0.5 bg-white ${open ? 'opacity-0' : ''}`}></span>
+          <span className={`w-6 h-0.5 bg-white transition-all ${open ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-slate-950/98 backdrop-blur-lg border-b border-white/10 p-10 flex flex-col items-center space-y-8 text-center shadow-2xl">
+          <div className="flex flex-col space-y-4 w-full">
+             <p className="text-slate-500 text-[10px] tracking-[0.4em] uppercase font-black">Our Collections</p>
+             {['Curtains', 'Shutters', 'Blinds', 'Zip Screens', 'Automation'].map((item) => (
+               <Link 
+                 key={item} 
+                 href={`/products/${item.toLowerCase().replace(' ', '')}`} 
+                 className="text-white text-lg font-bold uppercase tracking-widest hover:text-orange-500" 
+                 onClick={() => setOpen(false)}
+               >
+                 {item}
+               </Link>
+             ))}
+          </div>
+          <Link href="/contact" className="bg-orange-500 w-full py-4 rounded-full font-bold uppercase text-sm tracking-widest shadow-lg shadow-orange-500/20">
+            Get Free Quote
+          </Link>
         </div>
       )}
     </nav>
