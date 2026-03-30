@@ -1,34 +1,89 @@
-import Link from 'next/link'
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="bg-slate-950 text-white border-b border-slate-800 px-8 py-6">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo: Bold & Professional */}
-        <Link href="/" className="text-2xl font-black tracking-tighter uppercase italic">
-          Chris <span className="text-blue-600">Curtains</span>
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent px-10 py-8">
+      <div className="max-w-7xl mx-auto flex justify-center items-center gap-16 md:gap-50">
+        
+        {/* 1. Logo */}
+        <Link href="/" className="text-2xl font-black tracking-tighter uppercase italic text-white shrink-0">
+          Chris <span className="text-orange-400">Curtains</span>
         </Link>
 
-        {/* Menu Items */}
-        <div className="hidden md:flex items-center space-x-12 text-sm font-bold uppercase tracking-widest">
-          <Link href="/" className="hover:text-blue-500 transition-colors">Home</Link>
-          <Link href="/products" className="hover:text-blue-500 transition-colors">Curtains</Link>
-          <Link href="/projects" className="hover:text-blue-500 transition-colors">Projects</Link>
-          
-          {/* CTA Button: High Contrast */}
-          <Link href="/contact">
-            <button className="bg-white text-black px-6 py-2 hover:bg-blue-600 hover:text-white transition-all duration-300">
-              Get an Estimate
-            </button>
-          </Link>
+        {/* 2. Menu + Button Group */}
+        <div className="hidden md:flex items-center gap-2">
+          {/* Only Products Dropdown */}
+          <div className="relative group">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-white cursor-pointer hover:text-orange-500 transition-colors">
+              Products
+            </span>
+            
+            {/* Dropdown Menu */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="bg-slate-900/95 backdrop-blur-xl border border-white/10 p-6 min-w-[200px] space-y-4 shadow-2xl rounded-lg">
+                {['Curtains', 'Shutters', 'Blinds', 'Zip Screens', 'Automation'].map((item) => (
+                  <Link 
+                    key={item}
+                    href={`/products/${item.toLowerCase().replace(' ', '')}`} 
+                    className="block text-white hover:text-orange-500 transition-colors text-xs font-bold tracking-widest uppercase"
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Vertical Divider */}
+          <div className="h-4 w-[1px] bg-white/20 mx-2"></div>
+
+          {/* FREE QUOTE Button */}
+          <div className="shrink-0">
+            <Link href="/contact">
+              <button className="bg-white/10 border border-white/40 text-white px-7 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                GET FREE QUOTE
+              </button>
+            </Link>
+          </div>
         </div>
 
-        {/* Mobile Toggle */}
-        <div className="md:hidden">
-          <div className="w-6 h-0.5 bg-white mb-1.5"></div>
-          <div className="w-6 h-0.5 bg-white"></div>
-        </div>
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden absolute right-10 flex flex-col space-y-1.5"
+        >
+          <span className={`w-6 h-0.5 bg-white transition-all ${open ? 'rotate-45 translate-y-2' : ''}`}></span>
+          <span className={`w-6 h-0.5 bg-white ${open ? 'opacity-0' : ''}`}></span>
+          <span className={`w-6 h-0.5 bg-white transition-all ${open ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-slate-950/98 backdrop-blur-lg border-b border-white/10 p-10 flex flex-col items-center space-y-8 text-center shadow-2xl">
+          <div className="flex flex-col space-y-4 w-full">
+             <p className="text-slate-500 text-[10px] tracking-[0.4em] uppercase font-black">Our Collections</p>
+             {['Curtains', 'Shutters', 'Blinds', 'Zip Screens', 'Automation'].map((item) => (
+               <Link 
+                 key={item} 
+                 href={`/products/${item.toLowerCase().replace(' ', '')}`} 
+                 className="text-white text-lg font-bold uppercase tracking-widest hover:text-orange-500" 
+                 onClick={() => setOpen(false)}
+               >
+                 {item}
+               </Link>
+             ))}
+          </div>
+          <Link href="/contact" className="bg-orange-500 w-full py-4 rounded-full font-bold uppercase text-sm tracking-widest shadow-lg shadow-orange-500/20">
+            Get Free Quote
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }
