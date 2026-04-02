@@ -75,48 +75,105 @@ export default function Homepage() {
       </div>
     </section>
 
-      {/* Collections Section */}
-      <section className="bg-white text-slate-800 pt-12 pb-24 px-24 md:px-40">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 gap-6">
-          <div>
-            <span className="uppercase tracking-[0.2em] text-[12px] text-gray-400 font-semibold">
-              Our Proud Offerings
+    {/* Value Proposition Section */}
+    <section className="bg-white py-24 px-20 border-b border-slate-50">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-24">
+        
+        {/* Left: Heading */}
+        <div className="md:w-1/3">
+          <div className="sticky top-32">
+            <span className="uppercase tracking-[0.2em] text-[12px] text-orange-400 font-semibold">
+              Why Choose Us
             </span>
-            <h2 className="text-4xl font-extrabold pt-1 tracking-tight">The Collection</h2>
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 leading-tight uppercase tracking-tighter">
+              What makes our <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">
+                solutions exclusive?
+              </span>
+            </h2>
+
+            <div className="relative pl-6 border-l-2 border-orange-400 mt-10">
+              <p className="text-2xl font-serif italic text-slate-700 leading-relaxed">
+                "At Chris Curtains, we don’t just cover windows. <br />
+                We craft the <span className="text-orange-500">atmosphere</span> of your home."
+              </p>
+            </div>
           </div>
-          <Link href="/products" className="w-fit">
-            <span className="text-xs uppercase tracking-widest font-semibold text-slate-700 border-b border-slate-700 pb-1 hover:text-orange-500 hover:border-orange-500 transition-all duration-300 cursor-pointer">
-              View All
-            </span>
-          </Link>
         </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: 'Curtains', img: '/curtain-1.jpg' },
-              { title: 'Shutters', img: '/shutter-1.jpg' },
-              { title: 'Roller Blinds', img: '/rollerblind-1.jpg' },
-              { title: 'Timber Venetians', img: '/timber-1.jpg' },
-              { title: 'Zip Screens', img: '/zip-1.jpg' },
-              { title: 'Automation & Motorisation', img: '/automation-1.jpg' }
-            ].map((item, index) => (
-              <Link href="/products" key={index} className="relative group overflow-hidden rounded-lg aspect-[16/9] cursor-pointer bg-slate-800">
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-slate-900/60 transition-all duration-500 flex items-center justify-center">
-                  <span className="text-white text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 font-semibold transition-all">
-                    {item.title}
-                  </span>
-                </div>
-              </Link>
-            ))}
+
+        {/* Right: Description Content */}
+        <div className="md:w-2/3 space-y-6 pt-6">
+          <p className="text-xl text-slate-800 font-medium leading-relaxed tracking-tighter">
+            Each piece is <span className="italic font-serif text-orange-500">precision-engineered</span> in Melbourne, ensuring a perfect fit that generic solutions simply cannot match.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+            <div className="space-y-2">
+              <h4 className="text-lg font-bold uppercase tracking-wider text-slate-900">Bespoke Artistry</h4>
+              <p className="text-base text-slate-500 leading-relaxed tracking-tight">Every fabric is hand-selected for its texture, durability, and how it interacts with the unique Australian light.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="text-lg font-bold uppercase tracking-wider text-slate-900">Lifetime Support</h4>
+              <p className="text-base text-slate-500 leading-relaxed tracking-tight">Our 10-year warranty isn't just a promise on paper—it's our commitment to lasting quality and your peace of mind.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="text-lg font-bold uppercase tracking-wider text-slate-900">Smart Integration</h4>
+              <p className="text-base text-slate-500 leading-relaxed tracking-tight">We seamlessly blend traditional textile craftsmanship with the latest in home automation technology.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="text-lg font-bold uppercase tracking-wider text-slate-900">Local Heritage</h4>
+              <p className="text-base text-slate-500 leading-relaxed tracking-tight">Proudly Melbourne-made, we understand the local climate and architectural styles better than anyone else.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      {/* Collections Section */}
+      <section className="bg-slate-100 text-slate-800 pt-12 pb-24 px-24 md:px-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 gap-6">
+            <div>
+              <span className="uppercase tracking-[0.2em] text-[12px] text-gray-400 font-semibold">
+                Our Proud Offerings
+              </span>
+              <h2 className="text-4xl font-extrabold pt-1 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-600">The Collection</h2>
+            </div>
+            <Link href="/products" className="w-fit">
+              <span className="text-xs uppercase tracking-widest font-semibold text-slate-700 border-b border-slate-700 pb-1 hover:text-orange-500 hover:border-orange-500 transition-all duration-300 cursor-pointer">
+                View All
+              </span>
+            </Link>
+          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: 'Curtains', img: '/curtain-1.jpg' },
+                { title: 'Shutters', img: '/shutter-1.jpg' },
+                { title: 'Roller Blinds', img: '/rollerblind-1.jpg' },
+                { title: 'Timber Venetians', img: '/timber-1.jpg' },
+                { title: 'Zip Screens', img: '/zip-1.jpg' },
+                { title: 'Automation & Motorisation', img: '/automation-1.jpg' }
+              ].map((item, index) => (
+                <Link href="/products" key={index} className="relative group overflow-hidden rounded-lg aspect-[16/9] cursor-pointer bg-slate-800">
+                  <img 
+                    src={item.img} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-slate-900/60 transition-all duration-500 flex items-center justify-center">
+                    <span className="text-white text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 font-semibold transition-all">
+                      {item.title}
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
       </section>
 
       {/* Contact Section */}
-      <section className="bg-slate-800 py-12 px-10 relative overflow-hidden shadow-[inset_0_0_100px_rgba(15,23,42,0.9)]">
+      <section className="bg-slate-800 py-12 px-10 relative overflow-hidden shadow-[inset_0_0_200px_rgba(15,23,42,1.5)]">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 tracking-tighter leading-[1.1]">
