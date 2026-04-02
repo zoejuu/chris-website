@@ -19,9 +19,9 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-2">
           {/* Only Products Dropdown */}
           <div className="relative group">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-white cursor-pointer hover:text-orange-500 transition-colors">
+            <Link href="/products" className="text-sm font-bold uppercase tracking-[0.2em] text-white cursor-pointer hover:text-orange-500 transition-colors">
               Products
-            </span>
+            </Link>
             
             {/* Dropdown Menu */}
             <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
