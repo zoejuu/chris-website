@@ -61,7 +61,7 @@ export default function CurtainsPage() {
 
       <SubNavbar />
 
-      {/* 2. Intro & Split Detail Section (lovelights 스타일) */}
+      {/* 2. Intro & Split Detail Section */}
       <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
@@ -96,7 +96,7 @@ export default function CurtainsPage() {
                 transition={{ delay: 0.2 }}
                 className="aspect-square bg-slate-100 rounded-sm overflow-hidden"
               >
-                <img src="/curtain/curtain-page-3.jpg" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" alt="Motorised System" />
+                <img src="/curtain/fabric.jpg" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" alt="Motorised System" />
               </motion.div>
             </div>
           </div>
