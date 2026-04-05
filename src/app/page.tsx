@@ -172,54 +172,6 @@ export default function Homepage() {
           </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="bg-slate-800 py-12 px-10 relative overflow-hidden shadow-[inset_0_0_200px_rgba(15,23,42,1.5)]">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 tracking-tighter leading-[1.1]">
-            Contact us Today for a <br /> 
-            <span className="font-serif italic font-light lowercase tracking-normal text-orange-400">Personalised Consultation</span>
-          </h2>
-
-          <p className="text-slate-500 font-bold mb-10 uppercase tracking-[0.2em] text-[12px]">
-            Available 24/7 for consultations <span className="text-slate-400">/</span> Greater Melbourne Area
-          </p>
-          <div className="border-t border-white/10 pt-10">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
-              
-              <div className="shrink-0">
-                <Link href="/contact">
-                  <button className="rounded-full bg-white text-black px-14 py-5 text-[11px] font-black uppercase tracking-[0.2em] hover:bg-orange-400 hover:text-white transition-all duration-500 shadow-2xl shadow-white/5">
-                    Contact Us
-                  </button>
-                </Link>
-              </div>
-
-              <div className="flex flex-col space-y-3 text-center md:text-left">
-                <div className="group">
-                  <span className="bg-orange-400 px-1.5 py-1 text-[9px] font-bold uppercase tracking-[0.2em]">
-                    Email
-                  </span>
-                  <p className="text-sm text-slate-200 font-light tracking-wide group-hover:text-white transition-colors">
-                    studio@chriscurtains.com.au
-                  </p>
-                </div>
-
-                <div className="group">
-                  <span className="bg-orange-400 px-1.5 py-1 text-[9px] font-bold uppercase tracking-[0.2em]">
-                    Phone
-                  </span>
-                  <p className="text-sm text-slate-200 font-light tracking-wide group-hover:text-white transition-colors">
-                    (03) 9876 5432
-                  </p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </>
   )
 }
