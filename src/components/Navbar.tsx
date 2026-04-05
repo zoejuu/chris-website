@@ -18,13 +18,13 @@ export default function Navbar() {
         {/* 2. Menu + Button Group */}
         <div className="hidden md:flex items-center gap-2">
           <div>
-            <Link href="/about" className="text-xs font-bold uppercase tracking-[0.1em] text-white cursor-pointer hover:text-orange-500 transition-colors pr-4">
+            <Link href="/about" className="text-xs font-bold uppercase tracking-[0.1em] text-white cursor-pointer hover:text-orange-400 transition-colors pr-4">
               About Us
             </Link>
           </div>
           {/* Only Products Dropdown */}
           <div className="relative group">
-            <Link href="/products" className="text-xs font-bold uppercase tracking-[0.1em] text-white cursor-pointer hover:text-orange-500 transition-colors">
+            <Link href="/products" className="text-xs font-bold uppercase tracking-[0.1em] text-white cursor-pointer hover:text-orange-400 transition-colors">
               Products
             </Link>
             
