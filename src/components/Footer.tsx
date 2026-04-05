@@ -1,8 +1,20 @@
 "use client"
 
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 export default function Footer() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <footer className="bg-slate-900 py-12 px-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
@@ -59,16 +71,16 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Instagram Preview */}
-          <div className="py-10 md:pl-10 flex flex-col justify-between">
-            
+          <div className="py-10 md:pl-10 flex flex-col h-full max-h-[300px] justify-center items-center text-center">
+            <div 
+              className="elfsight-app-2abf71da-b9b2-4ce0-986f-df4f63366cca" 
+              data-elfsight-app-lazy 
+            />
           </div>
         </div>
 
         {/* Bottom Copyright */}
-        <div className="mt-6 flex flex-col md:flex-row justify-between items-center opacity-50">
-          <p className="text-[10px] text-slate-300 uppercase tracking-[0.2em]">
-            Melbourne Made / Fully Insured
-          </p>
+        <div className="pt-6 text-center opacity-50">
           <p className="text-[10px] text-slate-300 uppercase tracking-[0.2em]">
             © 2026 Chris Curtains.
           </p>
