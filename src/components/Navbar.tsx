@@ -17,15 +17,20 @@ export default function Navbar() {
 
         {/* 2. Menu + Button Group */}
         <div className="hidden md:flex items-center gap-2">
+          <div>
+            <Link href="/about" className="text-xs font-bold uppercase tracking-[0.1em] text-white cursor-pointer hover:text-orange-500 transition-colors pr-4">
+              About Us
+            </Link>
+          </div>
           {/* Only Products Dropdown */}
           <div className="relative group">
-            <Link href="/products" className="text-sm font-bold uppercase tracking-[0.2em] text-white cursor-pointer hover:text-orange-500 transition-colors">
+            <Link href="/products" className="text-xs font-bold uppercase tracking-[0.1em] text-white cursor-pointer hover:text-orange-500 transition-colors">
               Products
             </Link>
             
             {/* Dropdown Menu */}
             <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-              <div className="bg-slate-900/95 backdrop-blur-xl border border-white/10 p-6 min-w-[200px] space-y-4 shadow-2xl rounded-lg">
+              <div className="bg-slate-900/60 backdrop-blur-xl border border-white/10 p-6 min-w-[200px] space-y-4 shadow-2xl rounded-lg">
                 {['Curtains', 'Shutters', 'Blinds', 'Zip Screens', 'Automation'].map((item) => (
                   <Link 
                     key={item}
