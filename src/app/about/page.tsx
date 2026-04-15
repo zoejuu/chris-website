@@ -20,7 +20,7 @@ export default function AboutPage() {
             className="space-y-6"
           >
             <span className="uppercase tracking-[0.4em] text-[10px] md:text-[12px] font-bold text-orange-400">
-              Our Heritage
+              About Us
             </span>
             <h1 className="text-5xl md:text-7xl font-light text-white leading-tight">
               A Decade of <br />
@@ -76,21 +76,21 @@ export default function AboutPage() {
             <div className="space-y-4">
               <span className="text-orange-400 text-[12px] font-black uppercase tracking-widest">Expertise</span>
               <h3 className="text-2xl font-light">10+ Years On-Site</h3>
-              <p className="text-slate-400 font-light text-sm leading-relaxed">
+              <p className="text-slate-400 font-light text-[16px] leading-relaxed">
                 From luxury apartments to heritage homes, our technical expertise ensures flawless finishing even in the most challenging structural environments.
               </p>
             </div>
             <div className="space-y-4 border-y md:border-y-0 md:border-x border-white/10 py-10 md:py-0 md:px-10">
               <span className="text-orange-400 text-[12px] font-black uppercase tracking-widest">Consultation</span>
               <h3 className="text-2xl font-light">Design-Led Approach</h3>
-              <p className="text-slate-400 font-light text-sm leading-relaxed">
+              <p className="text-slate-400 font-light text-[16px] leading-relaxed">
                 Led by an Interior Design specialist, we curate fabrics and systems that harmonize perfectly with your home’s existing architecture and color palette.
               </p>
             </div>
             <div className="space-y-4">
               <span className="text-orange-400 text-[12px] font-black uppercase tracking-widest">Integrity</span>
               <h3 className="text-2xl font-light">Direct Ownership</h3>
-              <p className="text-slate-400 font-light text-sm leading-relaxed">
+              <p className="text-slate-400 font-light text-[16px] leading-relaxed">
                 We do not outsource. Every measurement and installation is handled by our family team, ensuring absolute accountability and transparent communication.
               </p>
             </div>
@@ -109,13 +109,13 @@ export default function AboutPage() {
           <h2 className="text-4xl md:text-5xl font-light text-slate-900 italic font-serif">
             "Every window is an opportunity to frame a better lifestyle."
           </h2>
-          <p className="text-slate-500 font-light tracking-[0.2em] uppercase text-[10px]">
-            The Chris Curtains Family Team
+          <p className="text-slate-500 font-light tracking-[0.2em] uppercase text-[12px]">
+            Chris Curtains Team
           </p>
           <div className="pt-10">
             <a 
               href="/contact" 
-              className="inline-block border-b border-slate-900 pb-2 text-[11px] font-black uppercase tracking-[0.3em] hover:text-orange-500 hover:border-orange-500 transition-all duration-300"
+              className="inline-block border-b border-slate-900 pb-2 text-[14px] font-black uppercase tracking-[0.3em] hover:text-orange-500 hover:border-orange-500 transition-all duration-300"
             >
               Start your project
             </a>

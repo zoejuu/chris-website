@@ -6,36 +6,100 @@ import Link from 'next/link';
 export default function Homepage() {
   return (
     <>
-    <section className="relative min-h-[60vh] pt-30 pb-15 px-10 text-white flex items-center justify-center">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/background.jpg"
-          alt="Luxury Interior"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-950/70"></div>
-      </div>
-
-      <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8">
-        <h1 className="text-6xl font-black uppercase tracking-tighter leading-[0.9] text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-400 to-white">
-          Premium <br />Window <br />Solutions
-        </h1>
-        <div className="flex justify-center gap-3 mb-5">
-          <span className="bg-orange-400 px-3 py-1 text-[10px] font-bold uppercase tracking-wider">
-            Melbourne Made
-          </span>
-          <span className="bg-slate-800 px-3 py-1 text-[10px] font-bold uppercase tracking-wider">
-            10-Year Warranty
-          </span>
+    <section className="relative h-screen w-full flex items-center overflow-hidden bg-slate-950">
+        {/* Background Layer with Parallax-like effect */}
+        <div className="absolute inset-0 z-0">
+          <motion.img
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 2.5, ease: "easeOut" }}
+            src="/background.jpg"
+            alt="Luxury Interior"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent"></div>
         </div>
-        <p className="text-slate-200 text-lg font-light italic mb-5">
-          With over 15 years of experience, we provide precision-engineered<br></br>blinds and curtains for modern living.
-        </p>
-        <button className="border-2 border-slate-400 rounded-full text-slate-100 px-8 py-3 font-bold uppercase text-sm hover:bg-slate-400/20 hover:text-white transition-all duration-300">
-          Browse our Collection
-        </button>
-      </div>
-    </section>
+
+        {/* Content Container: Asymmetric Layout */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-12 items-center">
+          
+          <div className="md:col-span-8 space-y-10">
+            {/* Tagline */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+              className="flex items-center gap-4"
+            >
+              <div className="h-[1px] w-12 bg-orange-400"></div>
+              <span className="text-orange-400 text-[11px] font-bold uppercase tracking-[0.4em]">
+                Exquisite Melbourne Craftsmanship
+              </span>
+            </motion.div>
+
+            {/* Main Headline: Refined Typography */}
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-6xl md:text-8xl font-light text-white leading-[1.1] tracking-tight"
+            >
+              Transforming <br /> 
+              <span className="font-serif italic text-slate-300">Natural Light</span> <br />
+              Into Atmosphere.
+            </motion.h1>
+
+            {/* Description & CTA */}
+            <div className="max-w-md space-y-12">
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 1 }}
+                className="text-slate-400 text-lg font-light leading-relaxed border-l border-slate-800 pl-6"
+              >
+                With over 15 years of mastery, Chris Curtains provides bespoke, 
+                precision-engineered window solutions for Melbourne&apos;s most refined homes.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2 }}
+                className="flex flex-wrap gap-6 items-center"
+              >
+                <Link href="/products">
+                  <button className="bg-white text-slate-950 px-10 py-5 text-[11px] font-black uppercase tracking-[0.2em] hover:bg-orange-400 hover:text-white transition-all duration-500 rounded-sm">
+                    View Collections
+                  </button>
+                </Link>
+                <div className="flex flex-col">
+                  <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Inquiries</span>
+                  <span className="text-white text-sm font-light">studio@chriscurtains.com.au</span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Right Decoration: Subtle Badge */}
+          <div className="hidden md:flex md:col-span-4 justify-end">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.5 }}
+              className="relative w-32 h-32 rounded-full border border-white/10 flex items-center justify-center p-8 text-center"
+            >
+              <span className="text-[9px] text-white/40 uppercase tracking-[0.3em] leading-tight">
+                Quality <br /> Guaranteed <br /> Since 2006
+              </span>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
+          <div className="w-[1px] h-16 bg-gradient-to-b from-white to-transparent opacity-30 animate-pulse"></div>
+        </div>
+      </section>
     
     {/* About Section */}
     <section className="bg-slate-100 py-18 px-20">
