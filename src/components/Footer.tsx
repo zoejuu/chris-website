@@ -26,7 +26,7 @@ export default function Footer() {
               <div className="space-y-1">
                 <p className="text-white text-[10px] font-black uppercase tracking-[0.2em]">Quick Links</p>
                 <ul className="space-y-1">
-                  {['Home', 'About Us', 'Contact'].map((item) => (
+                  {['Home', 'About', 'Contact'].map((item) => (
                     <li key={item}>
                       <Link href={`/${item.toLowerCase().replace(' ', '')}`} className="text-slate-400 hover:text-white text-[10px] font-bold uppercase tracking-widest transition-colors">
                         {item}
