@@ -10,14 +10,14 @@ export default function CurtainsPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center justify-center bg-slate-900 overflow-hidden">
+      <section className="relative min-h-[300px]  flex items-center justify-center bg-slate-900 overflow-hidden">
         <img 
           src="/automation-2.jpg"
           alt="Bespoke Curtains"
           className="absolute inset-0 w-full h-full object-cover object-[center_40%] opacity-60"
         />
         <div className="relative z-10 text-center space-y-4">
-          <span className="uppercase tracking-[0.3em] text-[12px] text-orange-400 font-bold mb-4 block">
+          <span className="uppercase tracking-[0.3em] text-[12px] text-orange-400 font-bold mb-4 block pt-10">
             Premium Collection
           </span>
           <h1 className="text-5xl md:text-7xl font-serif italic text-white tracking-normal">

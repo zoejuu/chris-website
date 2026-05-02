@@ -42,7 +42,7 @@ export default function ProductsPage() {
   return (
     <div className="bg-white">
       {/* Header Section: Hero Style */}
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden bg-slate-900">
+      <section className="relative min-h-[300px] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0 opacity-40">
           <img
             src="/background.jpg"
@@ -51,7 +51,7 @@ export default function ProductsPage() {
           />
         </div>
         <div className="relative z-10 text-center">
-          <span className="uppercase tracking-[0.3em] text-[12px] text-orange-400 font-bold mb-4 block">
+          <span className="uppercase tracking-[0.3em] text-[12px] text-orange-400 font-bold mb-4 block pt-10">
             Exquisite Craftsmanship
           </span>
           <h1 className="text-5xl md:text-7xl font-bold text-white uppercase tracking-tight italic font-serif">

@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* 1. Minimal Header Section */}
-      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center bg-slate-900 overflow-hidden">
+      <section className="relative min-h-[200px] md:min-h-[600px] flex items-center justify-center bg-slate-900 overflow-hidden py-32 md:py-40">
         <img 
           src="/zipscreen/zipscreen-page.jpg"
           alt="Bespoke Curtains and Blinds"

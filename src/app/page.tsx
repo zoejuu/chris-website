@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Homepage() {
   return (
     <>
-    <section className="relative h-screen w-full flex items-center overflow-hidden bg-slate-950">
+    <section className="relative min-h-screen w-full flex items-center overflow-hidden bg-slate-950">
         {/* Background Layer with Parallax-like effect */}
         <div className="absolute inset-0 z-0">
           <motion.img
@@ -21,22 +21,9 @@ export default function Homepage() {
         </div>
 
         {/* Content Container: Asymmetric Layout */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-12 items-center">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-12 items-center pt-24 md:pt-36 pb-10 md:pb-20">
           
           <div className="md:col-span-8 space-y-10">
-            {/* Tagline */}
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 }}
-              className="flex items-center gap-4"
-            >
-              <div className="h-[1px] w-12 bg-orange-400"></div>
-              <span className="text-orange-400 text-[11px] font-bold uppercase tracking-[0.4em]">
-                Exquisite Melbourne Craftsmanship
-              </span>
-            </motion.div>
-
             {/* Main Headline: Refined Typography */}
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
@@ -55,7 +42,7 @@ export default function Homepage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="text-slate-400 text-lg font-light leading-relaxed border-l border-slate-800 pl-6"
+                className="text-slate-400 text-lg font-light leading-relaxed border-l border-slate-800"
               >
                 With over 15 years of mastery, Chris Curtains provides bespoke, 
                 precision-engineered window solutions for Melbourne&apos;s most refined homes.
@@ -73,7 +60,7 @@ export default function Homepage() {
                   </button>
                 </Link>
                 <div className="flex flex-col">
-                  <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Inquiries</span>
+                  <span className="text-[10px] text-slate-300 uppercase tracking-widest mb-1">Inquiries</span>
                   <span className="text-white text-sm font-light">studio@chriscurtains.com.au</span>
                 </div>
               </motion.div>
