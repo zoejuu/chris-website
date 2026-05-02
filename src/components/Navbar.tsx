@@ -70,21 +70,46 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-slate-950/98 backdrop-blur-lg border-b border-white/10 p-10 flex flex-col items-center space-y-8 text-center shadow-2xl">
+        <div className="md:hidden absolute top-full left-0 w-full bg-slate-950/98 backdrop-blur-lg border-b border-white/10 p-10 flex flex-col items-center space-y-6 text-center shadow-2xl">
+          
           <div className="flex flex-col space-y-4 w-full">
-             <p className="text-slate-500 text-[10px] tracking-[0.4em] uppercase font-black">Our Collections</p>
-             {['Curtains', 'Shutters', 'Blinds', 'Zip Screens', 'Automation'].map((item) => (
-               <Link 
-                 key={item} 
-                 href={`/products/${item.toLowerCase().replace(' ', '')}`} 
-                 className="text-white text-lg font-bold uppercase tracking-widest hover:text-orange-500" 
-                 onClick={() => setOpen(false)}
-               >
-                 {item}
-               </Link>
-             ))}
+            <p className="text-slate-500 text-[10px] tracking-[0.4em] uppercase font-black mb-2">Our Collections</p>
+            {['Curtains', 'Shutters', 'Blinds', 'Zip Screens', 'Automation'].map((item) => (
+              <Link 
+                key={item} 
+                href={`/products/${item.toLowerCase().replace(' ', '')}`} 
+                className="text-white text-lg font-bold uppercase tracking-widest hover:text-orange-500 transition-colors" 
+                onClick={() => setOpen(false)}
+              >
+                {item}
+              </Link>
+            ))}
           </div>
-          <Link href="/contact" className="bg-orange-500 w-full py-4 rounded-full font-bold uppercase text-sm tracking-widest shadow-lg shadow-orange-500/20">
+
+          <div className="flex flex-col space-y-4">
+            <p className="text-slate-500 text-[10px] tracking-[0.4em] uppercase font-black mb-">Company</p>
+            <Link 
+              href="/about" 
+              className="text-white text-lg font-bold uppercase tracking-widest hover:text-orange-500 transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link 
+              href="/contact" 
+              className="text-white text-lg font-bold uppercase tracking-widest hover:text-orange-500 transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              Contact
+            </Link>
+          </div>
+
+          {/* CTA 버튼 */}
+          <Link 
+            href="/contact" 
+            onClick={() => setOpen(false)}
+            className="bg-orange-500 w-full py-4 rounded-full font-bold uppercase text-sm tracking-widest shadow-lg shadow-orange-500/20 active:scale-95 transition-transform"
+          >
             Get Free Quote
           </Link>
         </div>
