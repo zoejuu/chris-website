@@ -139,7 +139,7 @@ export default function CurtainsPage() {
           <h3 className="text-2xl md:text-3xl font-light text-slate-900 font-serif italic leading-snug">
             "Redefining the boundaries between nature and comfort."
           </h3>
-          <p className="text-slate-500 text-[12px] tracking-[0.3em] uppercase font-bold">— Chris Curtains Philosophy</p>
+          <p className="text-slate-500 text-[12px] tracking-[0.3em] uppercase font-bold">— Melbourne Blinds Factory Philosophy</p>
         </motion.div>
       </section>
 

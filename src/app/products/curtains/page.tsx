@@ -117,7 +117,7 @@ export default function CurtainsPage() {
             </div>
 
             <p className="text-slate-600 text-lg leading-relaxed font-light">
-              Our bespoke curtains are more than just window coverings—they are a statement of style. 
+              Our curtains are more than just window coverings. They are a statement of style. 
               From sheer S-Fold curtains that invite soft natural light to heavy velvet blackouts for ultimate privacy, 
               we craft each piece in Melbourne with meticulous attention to detail.
             </p>
@@ -165,7 +165,7 @@ export default function CurtainsPage() {
           <h3 className="text-2xl md:text-3xl font-light text-slate-900 font-serif italic leading-snug">
             "The final layer of architecture that defines a room's soul."
           </h3>
-          <p className="text-slate-500 text-[12px] tracking-[0.3em] uppercase font-bold">— Chris Curtains Philosophy</p>
+          <p className="text-slate-500 text-[12px] tracking-[0.3em] uppercase font-bold">— Melbourne Blinds Factory Philosophy</p>
         </motion.div>
       </section>
     </div>

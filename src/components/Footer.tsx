@@ -49,7 +49,7 @@ export default function Footer() {
               </div>
             </div>
             <Link href="/" className="pb-8 text-xl font-black tracking-tighter uppercase italic text-white/80">
-              Chris <span className="text-orange-400/60">Curtains</span>
+              Melbourne <span className="text-orange-400/60">Blinds</span> Factory
             </Link>
           </div>
 
@@ -60,6 +60,7 @@ export default function Footer() {
               Contact us Today for <br/> Free Quote / Consultation
             </h3>
             <div className="space-y-1 mb-6">
+              <p className="text-xs text-slate-300 font-light">22 Bando Rd, Springvale</p>
               <p className="text-xs text-slate-300 font-light">studio@chriscurtains.com.au</p>
               <p className="text-xs text-slate-300 font-light">(03) 9876 5432</p>
             </div>
@@ -82,7 +83,7 @@ export default function Footer() {
         {/* Bottom Copyright */}
         <div className="pt-6 text-center opacity-50">
           <p className="text-[10px] text-slate-300 uppercase tracking-[0.2em]">
-            © 2026 Chris Curtains.
+            © 2026 Melbourne Blinds Factory.
           </p>
         </div>
       </div>

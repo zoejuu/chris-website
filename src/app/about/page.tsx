@@ -41,12 +41,12 @@ export default function AboutPage() {
             className="space-y-8"
           >
             <h2 className="text-3xl md:text-5xl font-light text-slate-900 leading-tight">
-              Beyond Curtains, <br />
+              Beyond Curtains & Blinds, <br />
               <span className="font-serif italic text-slate-500">We Build Trust.</span>
             </h2>
             <div className="space-y-6 text-slate-600 font-light leading-relaxed text-lg">
               <p>
-                Based in Melbourne, <strong>Chris Curtains</strong> is a family-owned and operated business with over <strong>10 years of professional experience</strong> in the window furnishing industry.
+                Based in Melbourne, <strong>Melbourne Blinds Factory</strong> is a family-owned and operated business with over <strong>10 years of professional experience</strong> in the window furnishing industry.
               </p>
               <p>
                 Our strength lies in the perfect synergy between technical precision and aesthetic vision. While our <strong>lead installer</strong> brings a decade of mastery in complex installations and structural integrity, our <strong>design consultant</strong> manages client communications to ensure every project is an artistic success.
@@ -110,7 +110,7 @@ export default function AboutPage() {
             "Every window is an opportunity to frame a better lifestyle."
           </h2>
           <p className="text-slate-500 font-light tracking-[0.2em] uppercase text-[12px]">
-            Chris Curtains Team
+            Melbourne Blinds Factory Team
           </p>
           <div className="pt-10">
             <a 

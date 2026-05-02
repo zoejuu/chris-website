@@ -50,7 +50,7 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <h3 className="text-[12px] font-bold uppercase tracking-widest text-slate-400">Our Business</h3>
                 <p className="text-lg text-slate-900 font-light leading-relaxed">
-                  Melbourne, Victoria <br />
+                  22 Bando Rd, Springvale, Victoria <br />
                   Fully Insured / Australian Made
                 </p>
               </div>

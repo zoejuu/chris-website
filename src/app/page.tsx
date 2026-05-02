@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Homepage() {
   return (
     <>
-    <section className="relative min-h-screen w-full flex items-center overflow-hidden bg-slate-950">
+    <section className="relative min-h-screen w-full flex items-center overflow-hidden bg-slate-950 pt-10 md:pt-0">
         {/* Background Layer with Parallax-like effect */}
         <div className="absolute inset-0 z-0">
           <motion.img
@@ -42,9 +42,9 @@ export default function Homepage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="text-slate-400 text-lg font-light leading-relaxed border-l border-slate-800"
+                className="text-slate-200 text-lg font-light leading-relaxed border-l border-slate-800"
               >
-                With over 15 years of mastery, Chris Curtains provides bespoke, 
+                With over 15 years of mastery, <span className="text-orange-400 font-bold tracking-tight italic">Melbourne Blinds Factory</span> provides bespoke, 
                 precision-engineered window solutions for Melbourne&apos;s most refined homes.
               </motion.p>
 
@@ -113,8 +113,8 @@ export default function Homepage() {
           </h2>
           <p className="text-gray-600 font-regular tracking-tighter leading-relaxed text-lg">
             With over a decade of experience in textile selection and window styling, 
-            Chris Curtains brings a refined eye to every home. We believe that 
-            curtains are more than window coverings—they are the final layer of 
+            We bring a refined eye to every home. We believe that 
+            blinds and curtains are more than window coverings. They are the final layer of 
             architecture that defines a room's soul.
           </p>
           <div className="pt-4">
@@ -145,7 +145,7 @@ export default function Homepage() {
 
             <div className="relative pl-6 border-l-2 border-orange-400 mt-10">
               <p className="text-2xl font-serif italic text-slate-700 leading-relaxed">
-                "At Chris Curtains, we don’t just cover windows. <br />
+                "At Melbourne Blinds Factory, we don’t just cover windows. <br />
                 We craft the <span className="text-orange-500">atmosphere</span> of your home."
               </p>
             </div>

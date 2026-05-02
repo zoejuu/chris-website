@@ -8,7 +8,7 @@ import SubNavbar from "@/components/Subnavbar";
 const productCategories = [
   {
     title: 'Curtains',
-    description: 'Elevate your interior with our bespoke curtain collection. From sheer elegance to total blackout solutions, we tailor every fold to your unique style.',
+    description: 'Elevate your interior with our curtain collection. From sheer elegance to total blackout solutions, we tailor every fold to your unique style.',
     img: '/curtain-1.jpg',
     href: '/products/curtains'
   },
@@ -73,7 +73,7 @@ export default function ProductsPage() {
           </div>
           <p className="text-slate-600 text-lg md:text-xl leading-relaxed font-light tracking-tight">
             As a dedicated <span className="font-semibold text-slate-900">family-owned and operated business</span>, 
-            Chris Curtains is built on a foundation of unwavering trust and personal accountability. 
+            Melbourne Blinds Factory is built on a foundation of unwavering trust and personal accountability. 
             Every project is overseen by our <span className="font-semibold text-slate-900">Master Installers with over 20 years of industry expertise</span>, 
             ensuring that your window solutions are not only aesthetically stunning but technically flawless. 
             We don't just deliver products. We provide a seamless, end-to-end experience defined by 

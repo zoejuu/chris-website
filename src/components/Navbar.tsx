@@ -8,11 +8,17 @@ export default function Navbar() {
 
   return (
     <nav className="absolute top-0 left-0 w-full z-50 bg-transparent px-10 py-8">
-      <div className="max-w-7xl mx-auto flex justify-center items-center gap-16 md:gap-50">
+      <div className="max-w-7xl mx-auto flex justify-between items-center lg:px-20 md:px-10">
         
         {/* 1. Logo */}
-        <Link href="/" className="text-2xl font-black tracking-tighter uppercase italic text-white shrink-0">
-          Chris <span className="text-orange-400">Curtains</span>
+        <Link 
+          href="/" 
+          className="text-2xl font-black tracking-tighter uppercase italic text-white shrink-0 block lg:flex lg:items-center lg:gap-2 leading-[1] lg:leading-none lg:text-left"
+        >
+          <span>Melbourne</span>
+          <br className="lg:hidden" /> 
+          <span className="text-orange-400">Blinds </span>
+          <span>Factory</span>
         </Link>
 
         {/* 2. Menu + Button Group */}
